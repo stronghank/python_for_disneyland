@@ -11,5 +11,5 @@ def traverse(root_path):
         print(spath)
         os.startfile(spath)
         time.sleep(3)
-root_path = r"D:\Chromes"  
+root_path = r"C:\Chromes"  
 traverse(root_path)

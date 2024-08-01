@@ -1,6 +1,6 @@
 import os, shutil
 import winshell
-folder = "D:\\Chromes"
+folder = "C:\\Chromes"
 for filename in os.listdir(folder):
     file_path = os.path.join(folder, filename)
     try:
@@ -11,11 +11,11 @@ for filename in os.listdir(folder):
     except Exception as e:
         print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-for i in range(1, 16):
+for i in range(1, 21):
     winshell.CreateShortcut(
-        Path=os.path.join("D:\\Chromes", str(i) + ".lnk"),
-        Target=r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-        Icon=(r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", 0),
-        Arguments="--user-data-dir=D:\\Chromes_data\\" + str(i) + r" https://www.hongkongdisneyland.com/zh-hk/merchstore/limited/",
+        Path=os.path.join("C:\\Chromes", str(i) + ".lnk"),
+        Target=r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        Icon=(r"C:\Program Files\Google\Chrome\Application\chrome.exe", 0),
+        Arguments="--user-data-dir=C:\\Chromes_data\\" + str(i) + r" https://www.hongkongdisneyland.com/zh-hk/merchstore/limited/",
         Description="Create shortcut"
     )
